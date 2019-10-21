@@ -42,12 +42,12 @@ public class Clist<E> implements List {
 
     @Override
     public Iterator iterator() {
-        return null;
+        return Arrays.stream(this.data).iterator(); // OK
     }
 
     @Override
-    public Object[] toArray() {
-        return new Object[0];
+    public Object[] toArray() { // OK
+        return this.data;
     }
 
     @Override
@@ -143,8 +143,16 @@ public class Clist<E> implements List {
     }
 
     @Override
-    public void add(int i, Object o) {
-
+    public void add(int i, Object o) { // OK
+        this.grow();
+        this.data.
+        for (int j = this.size() - 1; j > i; j--) {
+            this.data[j] = this.data[j - 1];
+            if (j == i + 1) {
+                this.data[i] = o;
+                break;
+            }
+        }
     }
 
     @Override
