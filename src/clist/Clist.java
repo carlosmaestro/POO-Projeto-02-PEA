@@ -145,7 +145,6 @@ public class Clist<E> implements List {
     @Override
     public void add(int i, Object o) { // OK
         this.grow();
-        this.data.
         for (int j = this.size() - 1; j > i; j--) {
             this.data[j] = this.data[j - 1];
             if (j == i + 1) {

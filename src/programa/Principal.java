@@ -8,8 +8,8 @@ public class Principal {
 
         Clist<String> clist = new Clist<String>();
 
-        clist.add("teste");
+//        clist.add("teste");
         System.out.println(clist.size());
-        System.out.println(clist.);
+//        System.out.println(clist.);
     }
 }
